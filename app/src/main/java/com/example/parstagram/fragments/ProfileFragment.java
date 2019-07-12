@@ -70,7 +70,7 @@ public class ProfileFragment extends PostsFragment {
         // Create the data source
         mPosts = new ArrayList<>();
         // Create the adapter
-        adapter = new ImageAdapter(getContext(), mPosts);
+        adapter = new ImageAdapter(getContext(), mPosts, getFragmentManager());
         // Set the adapter on the recycler view
         rvMyPosts.setAdapter(adapter);
         // Set the layout manager on the recycler view

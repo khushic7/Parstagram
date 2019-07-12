@@ -3,6 +3,7 @@ package com.example.parstagram.fragments;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -29,6 +30,7 @@ public class PostsFragment extends Fragment {
     protected RecyclerView rvPosts;
     protected PostsAdapter adapter;
     protected List<Post> mPosts;
+    MenuItem miActionProgressItem;
     private SwipeRefreshLayout swipeContainer;
 
     // onCreateView to inflate the view
@@ -73,7 +75,7 @@ public class PostsFragment extends Fragment {
     }
 
     public void fetchTimelineAsync(int page) {
-
+        // showProgressBar();
         ParseQuery<Post> postQuery = new ParseQuery<Post>(Post.class);
         postQuery.include(Post.KEY_USER);
         postQuery.setLimit(20);
@@ -82,6 +84,7 @@ public class PostsFragment extends Fragment {
         postQuery.findInBackground(new FindCallback<Post>() {
             @Override
             public void done(List<Post> posts, ParseException e) {
+                // hideProgressBar();
                 if (e != null) {
                     Log.e(TAG, "Error with query");
                     e.printStackTrace();
@@ -129,4 +132,23 @@ public class PostsFragment extends Fragment {
             }
         });
     }
+
+//    @Override
+//    public boolean onPrepareOptionsMenu(Menu menu) {
+//        // Store instance of the menu item containing progress
+//        miActionProgressItem = menu.findItem(R.id.miActionProgress);
+//        // Extract the action-view from the menu item
+//        ProgressBar v = (ProgressBar) MenuItemCompat.getActionView(miActionProgressItem);
+//        // Return to finish
+//        return AppCompatActivity.onPrepareOptionsMenu(menu);
+//    }
+//
+//    public void showProgressBar() {
+//        // Show progress item
+//        miActionProgressItem.setVisible(true);
+//    }
+//
+//    public void hideProgressBar() {
+//        miActionProgressItem.setVisible(false);
+//    }
 }

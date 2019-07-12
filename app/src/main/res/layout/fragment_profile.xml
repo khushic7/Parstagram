@@ -19,11 +19,14 @@
     <TextView
         android:id="@+id/tv_postsNumber"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="48dp"
         android:text="14"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_postsText"
         app:layout_constraintStart_toEndOf="@+id/iv_profilePictureForProfile"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,11 +34,14 @@
     <TextView
         android:id="@+id/tv_followersNumber"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="28dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="48dp"
         android:text="616"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_followersText"
         app:layout_constraintStart_toEndOf="@+id/tv_postsNumber"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,11 +49,14 @@
     <TextView
         android:id="@+id/tv_followingNumber"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="28dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="48dp"
         android:text="627"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_followingText"
         app:layout_constraintStart_toEndOf="@+id/tv_followersNumber"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,6 +70,7 @@
         android:layout_marginTop="64dp"
         android:text="Posts"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/iv_profilePictureForProfile"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,6 +83,7 @@
         android:layout_marginTop="64dp"
         android:text="Followers"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/tv_postsText"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -85,7 +96,7 @@
         android:layout_marginTop="64dp"
         android:text="Following"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/tv_followersText"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -97,6 +108,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:text="Khushi Chaudhari"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_profilePictureForProfile" />
 
@@ -106,35 +119,40 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="0dp"
         android:text="RHS '18 | UW '22"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_userFullName" />
 
     <Button
         android:id="@+id/btn_editProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="377dp"
+        android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@color/white"
         android:text="Edit Profile"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_userBio" />
 
     <Button
         android:id="@+id/logout_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="377dp"
+        android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@color/white"
         android:text="Log Out"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_editProfile" />
